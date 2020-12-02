@@ -1,0 +1,20 @@
+gpccVersion: v6.1.1
+kind: alert
+spec:
+  segmentDown:
+    alertInterval: 1h
+    alertIntervalPolicy: GradualIncrease #FixedTime, GradualIncrease, DoNotBotherMeAgain
+    recoveryAlert: Yes #Yes, No
+    cacheRefreshSchedule: 15m
+  segmentAvgCPUThreshold:
+    exceedPercent: 90
+    exceedDuration: 10m
+  masterCPUThreshold:
+    exceedPercent: 80
+    exceedDuration: 5m
+  segmentAvgMemThreshold:
+    exceedPercent: 80
+    exceedDuration: 30m
+  masterMemThreshold:
+    exceedPercent: 70
+    exceedDuration: 10m
